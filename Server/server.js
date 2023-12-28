@@ -6,6 +6,7 @@ const server = net.createServer(socket => {
 
     const writeStream = fs.createWriteStream('received_file.txt');
 
+    // use sockets
     socket.on('data', data => {
         writeStream.write(data);
     });
